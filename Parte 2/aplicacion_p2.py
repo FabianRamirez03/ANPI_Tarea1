@@ -1,5 +1,6 @@
 from metodos_p2 import *
 from sympy import *
+from math import pi
 
 #Valores iniciales:
 r = 10
@@ -15,10 +16,10 @@ x, y = symbols('x y')
 k = (10 * alpha) / log(10)
 print ("k: ", k)
 
-S = math.pi * pow(r, 2)
+S = pi * pow(r, 2)
 print ("s: ", S)
 
-gFunc = (((2 * S) / math.pi) * acos(x / (2 * r))) - (x * sqrt(pow(r, 2) - (pow(x, 2) / 4)))
+gFunc = (((2 * S) / pi) * acos(x / (2 * r))) - (x * sqrt(pow(r, 2) - (pow(x, 2) / 4)))
 print ("g1: ", gFunc)
 
 gFunc2 = pow(gFunc, 2)
