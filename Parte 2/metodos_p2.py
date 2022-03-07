@@ -1,12 +1,8 @@
-from sympy import sympify, symbols
-from sympy import Symbol
-from sympy import diff
-from sympy import solve
-import math
+from sympy import sympify, symbols, diff
 
 x, y = symbols('x y')
 
-def newton_H_m1(fun, x0, tol, iterMax):
+def newton_H_m1(fun: str, x0: int, tol: int, iterMax: int):
 
     """
     Esta función aproxima la solución de la función f(x)=0, utilizando el método de Newton Raphson.
@@ -14,8 +10,8 @@ def newton_H_m1(fun, x0, tol, iterMax):
     Sintaxis: newton_H_m1(fun, x0, tol, iterMax)
     
     Parámetros Iniciales: 
-                fun = es un string que representa a la función f
-                x0 = es el valor inicial de la iteración, este sera el primer valor evaluado.
+                fun = que representa a la función f
+                x0 = es el valor inicial de la iteración
                 tol = un número positivo que representa a la tolerancia para el criterio ||f(xk)|| < tol
                 iterMax = cantidad de iteraciones máximas
                 
@@ -25,7 +21,8 @@ def newton_H_m1(fun, x0, tol, iterMax):
                 error = |f(x)|
                 
     """ 
-
+    
+    #Verifica que la tolerancia sea positivo
     if (tol <= 0):
         
         print ("El valor de la tolerancia no es valido")
@@ -38,7 +35,6 @@ def newton_H_m1(fun, x0, tol, iterMax):
 
         k = 0
         error = tol + 1
-        e = []
 
         result = [0, 0, 0]
 
@@ -68,7 +64,7 @@ def newton_H_m1(fun, x0, tol, iterMax):
 
 #help(newton_H_m1)
 
-def newton_H_m2(fun, x0, tol, iterMax, B):
+def newton_H_m2(fun: str, x0: int, tol: int, iterMax: int, B: int):
 
     """
     Esta función aproxima la solución de la función f(x)=0, utilizando el método de Newton Raphson.
@@ -76,8 +72,8 @@ def newton_H_m2(fun, x0, tol, iterMax, B):
     Sintaxis: newton_H_m2(fun, x0, tol, iterMax)
     
     Parámetros Iniciales: 
-                fun = es un string que representa a la función f
-                x0 = es el valor inicial de la iteración, este sera el primer valor evaluado.
+                fun = representa a la función f
+                x0 = es el valor inicial de la iteración
                 tol = un número positivo que representa a la tolerancia para el criterio ||f(xk)|| < tol
                 iterMax = cantidad de iteraciones máximas
                 B = un parámetro para la función de peso
@@ -89,6 +85,7 @@ def newton_H_m2(fun, x0, tol, iterMax, B):
                 
     """ 
 
+    #Verifica que la tolerancia sea positivo
     if (tol <= 0):
         
         print ("El valor de la tolerancia no es valido")
@@ -101,8 +98,6 @@ def newton_H_m2(fun, x0, tol, iterMax, B):
 
         k = 0
         error = tol + 1
-        e = []
-
         result = [0,0,0]
 
         while (error > tol and k < iterMax):
@@ -135,7 +130,7 @@ def newton_H_m2(fun, x0, tol, iterMax, B):
 
 #help(newton_H_m2)
 
-def newton_G_m1(fun, x0, tol, iterMax):
+def newton_G_m1(fun: str, x0: int, tol: int, iterMax: int):
 
     """
     Esta función aproxima la solución de la función f(x)=0, utilizando el método de Newton Raphson.
@@ -144,7 +139,7 @@ def newton_G_m1(fun, x0, tol, iterMax):
     
     Parámetros Iniciales: 
                 fun = es un string que representa a la función f
-                x0 = es el valor inicial de la iteración, este sera el primer valor evaluado.
+                x0 = es el valor inicial de la iteración
                 tol = un número positivo que representa a la tolerancia para el criterio ||f(xk)|| < tol
                 iterMax = cantidad de iteraciones máximas
                 
@@ -155,6 +150,7 @@ def newton_G_m1(fun, x0, tol, iterMax):
                 
     """ 
 
+    #Verifica que la tolerancia sea positivo
     if (tol <= 0):
         
         print ("El valor de la tolerancia no es valido")
@@ -168,7 +164,6 @@ def newton_G_m1(fun, x0, tol, iterMax):
 
         k = 0
         error = tol + 1
-        e = []
         result = [0,0,0]
 
         while (error > tol and k < iterMax):
@@ -202,7 +197,7 @@ def newton_G_m1(fun, x0, tol, iterMax):
 
 #help(newton_G_m1)
 
-def newton_G_m2(fun, x0, tol, iterMax):
+def newton_G_m2(fun: str, x0: int, tol: int, iterMax: int):
 
     """
     Esta función aproxima la solución de la función f(x)=0, utilizando el método de Newton Raphson.
@@ -222,6 +217,7 @@ def newton_G_m2(fun, x0, tol, iterMax):
                 
     """ 
 
+    #Verifica que la tolerancia sea positivo
     if (tol <= 0):
         
         print ("El valor de la tolerancia no es valido")
@@ -235,7 +231,6 @@ def newton_G_m2(fun, x0, tol, iterMax):
 
         k = 0
         error = tol + 1
-        e = []
         result = [0,0,0]
 
         while (error > tol and k < iterMax):
