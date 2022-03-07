@@ -1,8 +1,10 @@
-from sympy import sympify
+from sympy import sympify, symbols
 from sympy import Symbol
 from sympy import diff
 from sympy import solve
 import math
+
+x, y = symbols('x y')
 
 def newton_H_m1(fun, x0, tol, iterMax):
 
@@ -32,7 +34,7 @@ def newton_H_m1(fun, x0, tol, iterMax):
     else:
 
         func = sympify(fun)
-        dfunc = diff(func, 'x')
+        dfunc = diff(func, x)
 
         k = 0
         error = tol + 1
@@ -95,7 +97,7 @@ def newton_H_m2(fun, x0, tol, iterMax, B):
     else:
 
         func = sympify(fun)
-        dfunc = diff(func, 'x')
+        dfunc = diff(func, x)
 
         k = 0
         error = tol + 1
@@ -161,8 +163,8 @@ def newton_G_m1(fun, x0, tol, iterMax):
     else:
 
         func = sympify(fun)
-        dfunc = diff(func, 'x')
-        ddfunc = diff(dfunc, 'x')
+        dfunc = diff(func, x)
+        ddfunc = diff(dfunc, x)
 
         k = 0
         error = tol + 1
@@ -228,8 +230,8 @@ def newton_G_m2(fun, x0, tol, iterMax):
     else:
 
         func = sympify(fun)
-        dfunc = diff(func, 'x')
-        ddfunc = diff(dfunc, 'x')
+        dfunc = diff(func, x)
+        ddfunc = diff(dfunc, x)
 
         k = 0
         error = tol + 1
