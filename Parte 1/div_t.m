@@ -1,7 +1,7 @@
 % Función div_t(x): f(x) = x^(-1)
 
-% Entradas: x: número real
-% Salidas: y: número real
+% Entradas: x: número real diferente de cero
+% Salidas: y: número real diferente de cero
 % Restricciones: x diferente de cero
 
 function y = div_t(x)
@@ -10,6 +10,7 @@ function y = div_t(x)
   
   if x == 0
     display("Error: la(s) entrada(s) no está en el dominio de la función")
+    y = NaN;
   else
     if factorial(0) < x <= factorial(20)
       xk = eps^2;

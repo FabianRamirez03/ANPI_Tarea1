@@ -1,7 +1,7 @@
 % Función sin_t(x): f(x) = sin(x)
 
 % Entradas: x: número real
-% Salidas: y: número real
+% Salidas: y: número real entre -1 y 1
 % Restricciones: ---
 
 function y = sin_t(x)
@@ -9,7 +9,7 @@ function y = sin_t(x)
   
   for n=0:k
     Skp1 = Sk + (-1)^n * x^(2*n+1) * div_t(factorial(2*n+1));
-    if abs(Skp1 - Sk) < tol || Skp1 > div_t(eps)
+    if abs(Skp1 - Sk) < tol || abs(Skp1) > div_t(eps)
       break
     endif
     Sk = Skp1;
