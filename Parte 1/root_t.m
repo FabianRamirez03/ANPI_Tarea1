@@ -21,7 +21,7 @@ function y = root_t(x,a)
       if abs(xkm1-xk) < tol*abs(xkm1)
         break
       endif
-      xk = xkm1
+      xk = xkm1;
     else
       display('La derivada de la función se hizo cero')
     endif
