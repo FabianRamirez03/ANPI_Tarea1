@@ -1,0 +1,7 @@
+﻿  parte_2.cpp
+C:\Users\leona\source\repos\Parte 3 c++\Parte 3 c++\parte_2.cpp(78,22): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\leona\source\repos\Parte 3 c++\Parte 3 c++\parte_2.cpp(90,14): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\leona\source\repos\Parte 3 c++\Parte 3 c++\parte_2.cpp(162,22): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\leona\source\repos\Parte 3 c++\Parte 3 c++\parte_2.cpp(240,22): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\leona\source\repos\Parte 3 c++\Parte 3 c++\parte_2.cpp(321,22): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  Parte 3 c++.vcxproj -> C:\Users\leona\source\repos\Parte 3 c++\Debug\Parte 3 c++.exe
