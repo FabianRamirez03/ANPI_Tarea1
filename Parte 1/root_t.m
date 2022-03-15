@@ -17,11 +17,11 @@ function y = root_t(x,a)
   
   for k=0:iterMax  
     if dgdx(xk) != 0
-      xkm1 = xk - (g(xk)/dgdx(xk));
-      if abs(xkm1-xk) < tol*abs(xkm1)
+      xkp1 = xk - (g(xk)/dgdx(xk));
+      if abs(xkp1-xk) < tol*abs(xkp1)
         break
       endif
-      xk = xkm1;
+      xk = xkp1;
     else
       display('La derivada de la función se hizo cero')
     endif

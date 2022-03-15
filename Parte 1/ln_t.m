@@ -10,7 +10,7 @@ function y = ln_t(x)
   if x > 0
     for n=0:k
       Skp1 = Sk + div_t(2*n+1) * ((x-1)*div_t(x+1))^(2*n);
-      if abs(Skp1 - Sk) < tol || Skp1 > div_t(eps)
+      if abs(Skp1 - Sk) < tol || Skp1 > div_t(eps) 
         break
       endif
       Sk = Skp1;

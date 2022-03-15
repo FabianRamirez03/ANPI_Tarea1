@@ -1,18 +1,19 @@
 % Función pi_t
-% Aproximación de pi con base en la serie de Euler para pi/2.
-% Se multiplica el valor obtenido por 2 para obtener pi
+% Aproximación de pi mediante el método iterativo de Newton-Raphson
+% xkp1 = xk - tan(xk)
+% x0 = 3
 
-% Sk = Sumatoria desde n=0 hasta infinito de (2)^n*(n!)^2/(2n+1)! = pi/2
-
-function y = pi_t
-  tol = 1e-8; k = 2500; Sk = 0;
+function y = pi_t()
+  tol = 1e-8; iterMax = 2500; 
+  xk = 3;
   
-  for n=0:k
-    Skp1 = Sk + (2)^(n) * factorial(n)^2 * div_t(factorial(2*n+1))
-    if abs(Skp1 - Sk) < tol || abs(Skp1) > div_t(eps)
+  for k=0:iterMax
+    xkp1 = xk - tan_t(xk);
+    if abs(xkp1 - xk) < tol || abs(xkp1) > div_t(eps)
       break
     endif
-    Sk = Skp1;
+    xk = xkp1;
   endfor
-  y = 2*Sk;
+  y = xk;
 endfunction
+
